@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import "package:intl/intl.dart";
+import 'package:ver1_20210924/news_detail.dart';
 
 
 
@@ -180,7 +181,7 @@ class _ReportPageState extends State<ReportPage> {
                         ),
                         Expanded(child: Container()),
                         const Text(
-                          "Detail",
+                          "More",
                           style: TextStyle(
                               color: Color(0xFFffa07a),
                               fontSize: 15,
@@ -197,9 +198,13 @@ class _ReportPageState extends State<ReportPage> {
                               color: const Color(0xFFffa07a)
                           ),
                           child: GestureDetector(
+                              onTap: (){
+                                Get.to(()=>News_detailPage());
+                              },
                               child: const Icon(
-                                  Icons.arrow_forward_ios, color: Colors.white)
-                          ),
+                                  Icons.arrow_forward_ios, color: Colors.white, )
+                              ),
+
                         )
                       ],
                     ),
